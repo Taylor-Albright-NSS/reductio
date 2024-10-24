@@ -18,11 +18,17 @@ public class Product
     {
         get
         {
-            if (Category == "apparel")
+            switch(Category)
             {
+                case "apparel":
                 return 1;
-            }
-            else {
+                case "potion":
+                return 2;
+                case "enchanted object":
+                return 3;
+                case "wand":
+                return 4;
+                default:
                 return 0;
             }
         }
