@@ -94,7 +94,7 @@ while (userChoice != "z")
         productList();
         break;
         case "b":
-        Console.Write("No option yet");
+        addProduct();
         break;
         case "c":
         Console.Write("No option yet");
@@ -118,6 +118,30 @@ void productList()
     }
     Console.WriteLine($"m. Return to menu");
 }
+
+void addProduct()
+{
+    Console.WriteLine("Enter the name");
+    string itemName = Console.ReadLine();
+
+    Console.WriteLine("Enter the price");
+    double itemPrice = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("Enter the category");
+    string itemCategory = Console.ReadLine();
+
+    Product newItem = new Product()
+    {
+        Name = itemName,
+        Price = itemPrice,
+        IsAvailable = true,
+        Category = itemCategory,
+        DateStocked = DateTime.Now,
+    };
+
+    products.Add(newItem);
+}
+
 
 void returnToMenu()
 {
