@@ -22,11 +22,11 @@ public class Product
             {
                 case "apparel":
                 return 1;
-                case "potion":
+                case "potions":
                 return 2;
-                case "enchanted object":
+                case "enchanted objects":
                 return 3;
-                case "wand":
+                case "wands":
                 return 4;
                 default:
                 return 0;
